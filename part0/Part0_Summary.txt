@@ -1,0 +1,27 @@
+HTTP GET   -> a request to get data form the server
+HTTP POST  -> a request to send/post data to the server, html forms use this 
+
+DOM (Document Object Model) -> an API (application programming interface) that allows java script to edit HTML, 
+	EX: <h1 id="title">Hello World</h1>
+
+	// Using the DOM API to find the element and change its color
+	const myTitle = document.getElementById("title");
+	myTitle.style.color = "blue";
+	
+	we can use jave script to edit the HTML 
+
+
+CSS (Cascading style sheets) -> its like a set of instructions for HTML elements, it tells it how to behave/appear 
+
+
+AJAX (asynchronous java script and XML) -> its term for a technique many single page applications use, it is pretty much just sending and receiving 
+JSON without needing to re render the page 
+
+
+SPA (Single page applications) -> a style/architectural pattern to develop web apps, these web apps don't re render put just GET and POST
+
+FULLSTACK -> buzzword? working on both backend and frontend 
+
+frontend -> run on the users browser, frontend code is java script
+
+backend -> its the server that the users browser talks to 
