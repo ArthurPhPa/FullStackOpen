@@ -1,3 +1,5 @@
+// const funcTest = singleParameter => console.log(singleParameter)
+
 const Header = (props) => {
   return (
     <div>
@@ -16,17 +18,9 @@ const Part = (props) => {
 const Content = (props) => {
   return (
     <div>
-      <Part p={props.p1} e={props.e1} />
-      <Part p={props.p2} e={props.e2} />
-      <Part p={props.p3} e={props.e3} />
-    </div>
-  )
-
-}
-const Total = (props) => {
-  return (
-    <div>
-      <p>Number of exercises {props.e1 + props.e2 + props.e3}</p>
+      <Part p={props.part1.name} e={props.part1.exercises} />
+      <Part p={props.part2.name} e={props.part2.exercises} />
+      <Part p={props.part3.name} e={props.part3.exercises} />
     </div>
   )
 }
@@ -34,24 +28,24 @@ const Total = (props) => {
 
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const part1 = {
+    name: 'Fundamentals of React',
+    exercises: 10
+  }
+  const part2 = {
+    name: 'Using props to pass data',
+    exercises: 7
+  }
+  const part3 = {
+    name: 'State of a component',
+    exercises: 14
+  }
 
   return (
     <div>
       <Header course={course} />
-      <Content
-        p1={part1}
-        e1={exercises1}
-        p2={part2}
-        e2={exercises2}
-        p3={part3}
-        e3={exercises3} />
-      <Total e1={exercises1} e2={exercises2} e3={exercises3} />
+      <Content part1={part1} part2={part2} part3={part3}/>
+      <p>Number of exercises {part1.exercises + part2.exercises + part3.exercises}</p>
     </div>
   )
 }
